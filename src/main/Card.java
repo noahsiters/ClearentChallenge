@@ -37,4 +37,12 @@ public class Card {
     public void setBalance(double arg){
         balance=arg;
     }
+
+    public double getInterestAccrued(int months){
+        double interestAccrued = 0;
+
+        interestAccrued = this.getBalance() * (months * this.getInterest());
+        
+        return interestAccrued;
+    }
 }

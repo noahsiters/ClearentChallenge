@@ -27,4 +27,16 @@ public class Person {
     public void addWallet(Wallet arg){
         wallets.add(arg);
     }
+
+    public double getTotalInterest(int months){
+        Wallet w = null;
+        double total = 0;
+
+        for(int i=0;i<=wallets.size()-1;i++){
+            w = wallets.get(i);
+            total += w.getTotalInterestAccrued(months);
+        }
+
+        return total;
+    }
 }
