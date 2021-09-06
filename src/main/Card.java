@@ -1,16 +1,31 @@
-public class Card {
+abstract public class Card {
     
     // attributes
-    private String type;
-    private double interest;
-    private double balance;
+    public String type;
+    public double interest;
+    public double balance;
 
     // constructor
-    public Card(String argType, double argInterest, double argBalance){
+/*     public Card(String argType, double argInterest, double argBalance){
         type=argType;
         interest=argInterest;
         balance=argBalance;
     }
+
+    public Card(String argType, double argBalance){
+        if(argType=="Mastercard"){
+            interest=0.05;
+        }
+        else if(argType=="Visa"){
+            interest=0.1;
+        }
+        else if(argType=="Discover"){
+            interest=0.01;
+        }
+
+        type=argType;
+        balance=argBalance;
+    } */
 
     // gets
     public String getType(){
@@ -38,11 +53,5 @@ public class Card {
         balance=arg;
     }
 
-    public double getInterestAccrued(int months){
-        double interestAccrued = 0;
-
-        interestAccrued = this.getBalance() * (months * this.getInterest());
-        
-        return interestAccrued;
-    }
+    public abstract double getInterestAccrued(int months);
 }

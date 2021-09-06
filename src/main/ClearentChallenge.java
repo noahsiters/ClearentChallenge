@@ -1,6 +1,10 @@
 public class ClearentChallenge {
     public static void main(String[] args) {
 
+        /* TODO: 
+        - Add JUNIT testing
+        - Add user input class for testing different test scenarios
+        */
 /*         Person p1 = new Person("Person 1");
         Card c1 = new Card("Mastercard", 0.05, 100);
         Card c2 = new Card("Visa", 0.1, 100);
@@ -18,9 +22,9 @@ public class ClearentChallenge {
         // Test Case 1 - Assuming that it is one month of interest
         Person p1 = new Person("Person 1");
         Wallet w1 = new Wallet();
-        Card c1 = new Card("Visa", 0.1, 100);
-        Card c2 = new Card("Mastercard", 0.05, 100);
-        Card c3 = new Card("Discover", 0.01, 100);
+        Card c1 = new Visa(100);
+        Card c2 = new Mastercard(100);
+        Card c3 = new Discover(100);
 
         //adding Cards to Wallet
         w1.addCard(c1);
@@ -39,9 +43,9 @@ public class ClearentChallenge {
         Person p2 = new Person("Person 2");
         Wallet w2 = new Wallet();
         Wallet w3 = new Wallet();
-        Card c4 = new Card("Visa", 0.1, 100);
-        Card c5 = new Card("Discover", 0.01, 100);
-        Card c6 = new Card("Mastercard", 0.05, 100);
+        Card c4 = new Visa(100);
+        Card c5 = new Discover(100);
+        Card c6 = new Mastercard(100);
 
         //adding Cards to Wallets
         w2.addCard(c4);
@@ -64,10 +68,10 @@ public class ClearentChallenge {
         Person p4 = new Person("Person 4");
         Wallet w4 = new Wallet();
         Wallet w5 = new Wallet();
-        Card c7 = new Card("Mastercard", 0.05, 100);
-        Card c8 = new Card("Visa", 0.1, 100);
-        Card c9 = new Card("Visa", 0.1, 100);
-        Card c10 = new Card("Matercard", 0.05, 100);
+        Card c7 = new Mastercard(100);
+        Card c8 = new Visa(100);
+        Card c9 = new Visa(100);
+        Card c10 = new Mastercard(100);
 
         //adding cards to wallets
         w4.addCard(c7);
