@@ -1,11 +1,11 @@
 abstract public class Card {
     
-    // attributes
+    // attributes (need to be public to use in extended classes)
     public String type;
     public double interest;
     public double balance;
 
-    // constructor
+    // constructor - constructors removed when changing this to an abstract class
 /*     public Card(String argType, double argInterest, double argBalance){
         type=argType;
         interest=argInterest;
@@ -53,5 +53,6 @@ abstract public class Card {
         balance=arg;
     }
 
+    // abstract declaration, implemented in Mastercard, Visa, and Discover classes
     public abstract double getInterestAccrued(int months);
 }

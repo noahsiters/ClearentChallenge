@@ -28,6 +28,7 @@ public class Person {
         wallets.add(arg);
     }
 
+    // gets total interest across all the wallets for this specific person
     public double getTotalInterest(int months){
         Wallet w = null;
         double total = 0;
